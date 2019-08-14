@@ -1,0 +1,30 @@
+\documentclass{article}
+\input{tech}
+\usepackage{lipsum}
+
+\begin{document}
+
+\section{Technical Definitions}
+A \deftech{technical definition} is a word or phrased with a technical use that
+may differ from its common English use.
+\Techs{technical definition} are introduced in italics, and later uses of a
+\tech{technical definition} will link back to their definition.
+
+\lipsum
+
+\section{Tags}
+A \deftech*{def}{tag} is associated with each \tech{technical definition}, and
+used to create the link.
+A \tech*{def}{tag} automatically computed from the \tech{technical definition},
+but can also be manually supplied using the * form of each macro.
+
+\lipsum
+\section{Prefixes}
+Each \tech{technical definition} also optionally takes a
+\deftech*[prefix]{pref}{prefix} as an optional argument.
+The current \tech*[prefix]{pref}{prefix} can also be supplied by redefining the
+macro in \verb|\techprefix|.
+This allows \tech{technical definitions} to be local to a section, chapter, or
+other unit of text.
+
+\end{document}
